@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace VisualC_Assignment3
 {
-    public partial class Form1 : Form
+    public partial class SharpMovies : Form
     {
-        public Form1()
+        public SharpMovies()
         {
             InitializeComponent();
         }
