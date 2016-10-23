@@ -16,7 +16,7 @@ namespace VisualC_Assignment3
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SharpMovies());
+            Application.Run(new StartForm());
         }
     }
 }

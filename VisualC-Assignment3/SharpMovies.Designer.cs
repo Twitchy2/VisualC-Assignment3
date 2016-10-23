@@ -32,14 +32,14 @@
             this.MoviesListBox = new System.Windows.Forms.ListBox();
             this.MovieLabel = new System.Windows.Forms.Label();
             this.SelectedGrpBox = new System.Windows.Forms.GroupBox();
-            this.MoviePictureBox = new System.Windows.Forms.PictureBox();
-            this.SelectedMovieLabel = new System.Windows.Forms.Label();
-            this.SelectedMovieTextBox = new System.Windows.Forms.TextBox();
-            this.CatagoryLabel = new System.Windows.Forms.Label();
-            this.CatagoryTextBox = new System.Windows.Forms.TextBox();
-            this.CostTextBox = new System.Windows.Forms.TextBox();
             this.CostLabel = new System.Windows.Forms.Label();
+            this.CostTextBox = new System.Windows.Forms.TextBox();
+            this.CatagoryTextBox = new System.Windows.Forms.TextBox();
+            this.CatagoryLabel = new System.Windows.Forms.Label();
+            this.SelectedMovieTextBox = new System.Windows.Forms.TextBox();
+            this.SelectedMovieLabel = new System.Windows.Forms.Label();
             this.NextButton = new System.Windows.Forms.Button();
+            this.MoviePictureBox = new System.Windows.Forms.PictureBox();
             this.SelectedGrpBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MoviePictureBox)).BeginInit();
             this.SuspendLayout();
@@ -88,29 +88,28 @@
             this.SelectedGrpBox.TabStop = false;
             this.SelectedGrpBox.Text = "Chosen Movie Stream:";
             // 
-            // MoviePictureBox
+            // CostLabel
             // 
-            this.MoviePictureBox.Location = new System.Drawing.Point(7, 27);
-            this.MoviePictureBox.Name = "MoviePictureBox";
-            this.MoviePictureBox.Size = new System.Drawing.Size(206, 239);
-            this.MoviePictureBox.TabIndex = 0;
-            this.MoviePictureBox.TabStop = false;
+            this.CostLabel.AutoSize = true;
+            this.CostLabel.Location = new System.Drawing.Point(219, 174);
+            this.CostLabel.Name = "CostLabel";
+            this.CostLabel.Size = new System.Drawing.Size(53, 20);
+            this.CostLabel.TabIndex = 5;
+            this.CostLabel.Text = "Cost";
             // 
-            // SelectedMovieLabel
+            // CostTextBox
             // 
-            this.SelectedMovieLabel.AutoSize = true;
-            this.SelectedMovieLabel.Location = new System.Drawing.Point(219, 27);
-            this.SelectedMovieLabel.Name = "SelectedMovieLabel";
-            this.SelectedMovieLabel.Size = new System.Drawing.Size(152, 20);
-            this.SelectedMovieLabel.TabIndex = 1;
-            this.SelectedMovieLabel.Text = "Selected Movie";
+            this.CostTextBox.Location = new System.Drawing.Point(219, 197);
+            this.CostTextBox.Name = "CostTextBox";
+            this.CostTextBox.Size = new System.Drawing.Size(268, 27);
+            this.CostTextBox.TabIndex = 4;
             // 
-            // SelectedMovieTextBox
+            // CatagoryTextBox
             // 
-            this.SelectedMovieTextBox.Location = new System.Drawing.Point(219, 50);
-            this.SelectedMovieTextBox.Name = "SelectedMovieTextBox";
-            this.SelectedMovieTextBox.Size = new System.Drawing.Size(268, 27);
-            this.SelectedMovieTextBox.TabIndex = 2;
+            this.CatagoryTextBox.Location = new System.Drawing.Point(219, 127);
+            this.CatagoryTextBox.Name = "CatagoryTextBox";
+            this.CatagoryTextBox.Size = new System.Drawing.Size(268, 27);
+            this.CatagoryTextBox.TabIndex = 4;
             // 
             // CatagoryLabel
             // 
@@ -121,28 +120,21 @@
             this.CatagoryLabel.TabIndex = 3;
             this.CatagoryLabel.Text = "Catagory";
             // 
-            // CatagoryTextBox
+            // SelectedMovieTextBox
             // 
-            this.CatagoryTextBox.Location = new System.Drawing.Point(219, 127);
-            this.CatagoryTextBox.Name = "CatagoryTextBox";
-            this.CatagoryTextBox.Size = new System.Drawing.Size(268, 27);
-            this.CatagoryTextBox.TabIndex = 4;
+            this.SelectedMovieTextBox.Location = new System.Drawing.Point(219, 50);
+            this.SelectedMovieTextBox.Name = "SelectedMovieTextBox";
+            this.SelectedMovieTextBox.Size = new System.Drawing.Size(268, 27);
+            this.SelectedMovieTextBox.TabIndex = 2;
             // 
-            // CostTextBox
+            // SelectedMovieLabel
             // 
-            this.CostTextBox.Location = new System.Drawing.Point(219, 197);
-            this.CostTextBox.Name = "CostTextBox";
-            this.CostTextBox.Size = new System.Drawing.Size(268, 27);
-            this.CostTextBox.TabIndex = 4;
-            // 
-            // CostLabel
-            // 
-            this.CostLabel.AutoSize = true;
-            this.CostLabel.Location = new System.Drawing.Point(219, 174);
-            this.CostLabel.Name = "CostLabel";
-            this.CostLabel.Size = new System.Drawing.Size(53, 20);
-            this.CostLabel.TabIndex = 5;
-            this.CostLabel.Text = "Cost";
+            this.SelectedMovieLabel.AutoSize = true;
+            this.SelectedMovieLabel.Location = new System.Drawing.Point(219, 27);
+            this.SelectedMovieLabel.Name = "SelectedMovieLabel";
+            this.SelectedMovieLabel.Size = new System.Drawing.Size(152, 20);
+            this.SelectedMovieLabel.TabIndex = 1;
+            this.SelectedMovieLabel.Text = "Selected Movie";
             // 
             // NextButton
             // 
@@ -153,6 +145,14 @@
             this.NextButton.TabIndex = 4;
             this.NextButton.Text = "Next";
             this.NextButton.UseVisualStyleBackColor = true;
+            // 
+            // MoviePictureBox
+            // 
+            this.MoviePictureBox.Location = new System.Drawing.Point(7, 27);
+            this.MoviePictureBox.Name = "MoviePictureBox";
+            this.MoviePictureBox.Size = new System.Drawing.Size(206, 239);
+            this.MoviePictureBox.TabIndex = 0;
+            this.MoviePictureBox.TabStop = false;
             // 
             // SharpMovies
             // 
