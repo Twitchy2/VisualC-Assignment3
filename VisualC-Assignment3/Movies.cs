@@ -12,6 +12,7 @@ namespace VisualC_Assignment3
         public string MovieName { get; set; }
 
         public string Catagory { get; set; }
+        public string FirstCost { get; set; }
 
         public int FinalCost { get; set; }
 

@@ -25,5 +25,10 @@ namespace VisualC_Assignment3
             Movies.Show();
             this.Hide();
         }
+
+        private void StartForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

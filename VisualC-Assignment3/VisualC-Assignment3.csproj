@@ -111,6 +111,39 @@
   <ItemGroup>
     <None Include="Resources\sharp movie streaming 2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeathRace2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DoctorStrange.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HacksawRidge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LightsOut.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mama.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PetesDragon.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ratchet&amp;Clank.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sully.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TheGreenHornet.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TheMechanic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\therite.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

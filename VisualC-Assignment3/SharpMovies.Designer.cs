@@ -38,8 +38,8 @@
             this.CatagoryLabel = new System.Windows.Forms.Label();
             this.SelectedMovieTextBox = new System.Windows.Forms.TextBox();
             this.SelectedMovieLabel = new System.Windows.Forms.Label();
-            this.NextButton = new System.Windows.Forms.Button();
             this.MoviePictureBox = new System.Windows.Forms.PictureBox();
+            this.NextButton = new System.Windows.Forms.Button();
             this.SelectedGrpBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MoviePictureBox)).BeginInit();
             this.SuspendLayout();
@@ -58,10 +58,24 @@
             // 
             this.MoviesListBox.FormattingEnabled = true;
             this.MoviesListBox.ItemHeight = 20;
+            this.MoviesListBox.Items.AddRange(new object[] {
+            "Death Race 2",
+            "Doctor Strange",
+            "Hacksaw Ridge",
+            "Lights Out",
+            "Mama",
+            "Pete\'s Dragon",
+            "Ratchet & Clank",
+            "Sully",
+            "The Green Hornet",
+            "The Mechanic",
+            "The Rite"});
             this.MoviesListBox.Location = new System.Drawing.Point(21, 114);
             this.MoviesListBox.Name = "MoviesListBox";
-            this.MoviesListBox.Size = new System.Drawing.Size(179, 404);
+            this.MoviesListBox.Size = new System.Drawing.Size(190, 404);
+            this.MoviesListBox.Sorted = true;
             this.MoviesListBox.TabIndex = 1;
+            this.MoviesListBox.SelectedIndexChanged += new System.EventHandler(this.MoviesListBox_SelectedIndexChanged);
             // 
             // MovieLabel
             // 
@@ -101,6 +115,7 @@
             // 
             this.CostTextBox.Location = new System.Drawing.Point(219, 197);
             this.CostTextBox.Name = "CostTextBox";
+            this.CostTextBox.ReadOnly = true;
             this.CostTextBox.Size = new System.Drawing.Size(268, 27);
             this.CostTextBox.TabIndex = 4;
             // 
@@ -108,6 +123,7 @@
             // 
             this.CatagoryTextBox.Location = new System.Drawing.Point(219, 127);
             this.CatagoryTextBox.Name = "CatagoryTextBox";
+            this.CatagoryTextBox.ReadOnly = true;
             this.CatagoryTextBox.Size = new System.Drawing.Size(268, 27);
             this.CatagoryTextBox.TabIndex = 4;
             // 
@@ -124,6 +140,7 @@
             // 
             this.SelectedMovieTextBox.Location = new System.Drawing.Point(219, 50);
             this.SelectedMovieTextBox.Name = "SelectedMovieTextBox";
+            this.SelectedMovieTextBox.ReadOnly = true;
             this.SelectedMovieTextBox.Size = new System.Drawing.Size(268, 27);
             this.SelectedMovieTextBox.TabIndex = 2;
             // 
@@ -136,6 +153,15 @@
             this.SelectedMovieLabel.TabIndex = 1;
             this.SelectedMovieLabel.Text = "Selected Movie";
             // 
+            // MoviePictureBox
+            // 
+            this.MoviePictureBox.Location = new System.Drawing.Point(7, 27);
+            this.MoviePictureBox.Name = "MoviePictureBox";
+            this.MoviePictureBox.Size = new System.Drawing.Size(206, 239);
+            this.MoviePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.MoviePictureBox.TabIndex = 0;
+            this.MoviePictureBox.TabStop = false;
+            // 
             // NextButton
             // 
             this.NextButton.Enabled = false;
@@ -145,20 +171,14 @@
             this.NextButton.TabIndex = 4;
             this.NextButton.Text = "Next";
             this.NextButton.UseVisualStyleBackColor = true;
-            // 
-            // MoviePictureBox
-            // 
-            this.MoviePictureBox.Location = new System.Drawing.Point(7, 27);
-            this.MoviePictureBox.Name = "MoviePictureBox";
-            this.MoviePictureBox.Size = new System.Drawing.Size(206, 239);
-            this.MoviePictureBox.TabIndex = 0;
-            this.MoviePictureBox.TabStop = false;
+            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
             // SharpMovies
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(722, 529);
+            this.ControlBox = false;
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.SelectedGrpBox);
             this.Controls.Add(this.MovieLabel);
@@ -166,7 +186,11 @@
             this.Controls.Add(this.OpenLabel);
             this.Font = new System.Drawing.Font("Perpetua Titling MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "SharpMovies";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sharp Movie Streaming";
             this.SelectedGrpBox.ResumeLayout(false);
             this.SelectedGrpBox.PerformLayout();
