@@ -38,8 +38,9 @@
             this.CatagoryLabel = new System.Windows.Forms.Label();
             this.SelectedMovieTextBox = new System.Windows.Forms.TextBox();
             this.SelectedMovieLabel = new System.Windows.Forms.Label();
-            this.MoviePictureBox = new System.Windows.Forms.PictureBox();
             this.NextButton = new System.Windows.Forms.Button();
+            this.MoviePictureBox = new System.Windows.Forms.PictureBox();
+            this.CancelButton = new System.Windows.Forms.Button();
             this.SelectedGrpBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MoviePictureBox)).BeginInit();
             this.SuspendLayout();
@@ -153,15 +154,6 @@
             this.SelectedMovieLabel.TabIndex = 1;
             this.SelectedMovieLabel.Text = "Selected Movie";
             // 
-            // MoviePictureBox
-            // 
-            this.MoviePictureBox.Location = new System.Drawing.Point(7, 27);
-            this.MoviePictureBox.Name = "MoviePictureBox";
-            this.MoviePictureBox.Size = new System.Drawing.Size(206, 239);
-            this.MoviePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.MoviePictureBox.TabIndex = 0;
-            this.MoviePictureBox.TabStop = false;
-            // 
             // NextButton
             // 
             this.NextButton.Enabled = false;
@@ -173,12 +165,32 @@
             this.NextButton.UseVisualStyleBackColor = true;
             this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
+            // MoviePictureBox
+            // 
+            this.MoviePictureBox.Location = new System.Drawing.Point(7, 27);
+            this.MoviePictureBox.Name = "MoviePictureBox";
+            this.MoviePictureBox.Size = new System.Drawing.Size(206, 239);
+            this.MoviePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.MoviePictureBox.TabIndex = 0;
+            this.MoviePictureBox.TabStop = false;
+            // 
+            // CancelButton
+            // 
+            this.CancelButton.Location = new System.Drawing.Point(235, 467);
+            this.CancelButton.Name = "CancelButton";
+            this.CancelButton.Size = new System.Drawing.Size(104, 50);
+            this.CancelButton.TabIndex = 11;
+            this.CancelButton.Text = "Cancel";
+            this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            // 
             // SharpMovies
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(722, 529);
             this.ControlBox = false;
+            this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.SelectedGrpBox);
             this.Controls.Add(this.MovieLabel);
@@ -214,6 +226,7 @@
         private System.Windows.Forms.Label SelectedMovieLabel;
         private System.Windows.Forms.PictureBox MoviePictureBox;
         private System.Windows.Forms.Button NextButton;
+        private System.Windows.Forms.Button CancelButton;
     }
 }
 

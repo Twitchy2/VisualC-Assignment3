@@ -14,7 +14,7 @@ namespace VisualC_Assignment3
         public string Catagory { get; set; }
         public string FirstCost { get; set; }
 
-        public int FinalCost { get; set; }
+        public string FinalCost { get; set; }
 
 
     }

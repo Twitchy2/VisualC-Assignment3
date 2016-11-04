@@ -42,6 +42,8 @@
             this.CatagoryLabel = new System.Windows.Forms.Label();
             this.TitleLabel = new System.Windows.Forms.Label();
             this.OrderGroupBox = new System.Windows.Forms.GroupBox();
+            this.DVDTextBox = new System.Windows.Forms.TextBox();
+            this.DVDLabel = new System.Windows.Forms.Label();
             this.TotalTextBox = new System.Windows.Forms.TextBox();
             this.SalesTaxTextBox = new System.Windows.Forms.TextBox();
             this.SubtotalTextBox = new System.Windows.Forms.TextBox();
@@ -88,6 +90,7 @@
             this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
             this.printToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.printToolStripMenuItem.Text = "Print";
+            this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
             // streamToolStripMenuItem
             // 
@@ -95,6 +98,7 @@
             this.streamToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
             this.streamToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.streamToolStripMenuItem.Text = "Stream";
+            this.streamToolStripMenuItem.Click += new System.EventHandler(this.streamToolStripMenuItem_Click);
             // 
             // cancelToolStripMenuItem
             // 
@@ -102,6 +106,7 @@
             this.cancelToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
             this.cancelToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.cancelToolStripMenuItem.Text = "Cancel";
+            this.cancelToolStripMenuItem.Click += new System.EventHandler(this.cancelToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -117,6 +122,7 @@
             this.aboutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // MovieGroupBox
             // 
@@ -139,6 +145,7 @@
             this.MoviePictureBox.Location = new System.Drawing.Point(12, 152);
             this.MoviePictureBox.Name = "MoviePictureBox";
             this.MoviePictureBox.Size = new System.Drawing.Size(237, 274);
+            this.MoviePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.MoviePictureBox.TabIndex = 4;
             this.MoviePictureBox.TabStop = false;
             // 
@@ -178,6 +185,8 @@
             // 
             // OrderGroupBox
             // 
+            this.OrderGroupBox.Controls.Add(this.DVDTextBox);
+            this.OrderGroupBox.Controls.Add(this.DVDLabel);
             this.OrderGroupBox.Controls.Add(this.TotalTextBox);
             this.OrderGroupBox.Controls.Add(this.SalesTaxTextBox);
             this.OrderGroupBox.Controls.Add(this.SubtotalTextBox);
@@ -194,6 +203,28 @@
             this.OrderGroupBox.TabStop = false;
             this.OrderGroupBox.Text = "Your Order";
             // 
+            // DVDTextBox
+            // 
+            this.DVDTextBox.Enabled = false;
+            this.DVDTextBox.Location = new System.Drawing.Point(153, 70);
+            this.DVDTextBox.Name = "DVDTextBox";
+            this.DVDTextBox.ReadOnly = true;
+            this.DVDTextBox.Size = new System.Drawing.Size(237, 26);
+            this.DVDTextBox.TabIndex = 11;
+            this.DVDTextBox.Text = "$10.00";
+            this.DVDTextBox.Visible = false;
+            // 
+            // DVDLabel
+            // 
+            this.DVDLabel.AutoSize = true;
+            this.DVDLabel.Enabled = false;
+            this.DVDLabel.Location = new System.Drawing.Point(98, 70);
+            this.DVDLabel.Name = "DVDLabel";
+            this.DVDLabel.Size = new System.Drawing.Size(45, 18);
+            this.DVDLabel.TabIndex = 10;
+            this.DVDLabel.Text = "DVD";
+            this.DVDLabel.Visible = false;
+            // 
             // TotalTextBox
             // 
             this.TotalTextBox.Location = new System.Drawing.Point(153, 210);
@@ -204,7 +235,7 @@
             // 
             // SalesTaxTextBox
             // 
-            this.SalesTaxTextBox.Location = new System.Drawing.Point(153, 149);
+            this.SalesTaxTextBox.Location = new System.Drawing.Point(153, 165);
             this.SalesTaxTextBox.Name = "SalesTaxTextBox";
             this.SalesTaxTextBox.ReadOnly = true;
             this.SalesTaxTextBox.Size = new System.Drawing.Size(237, 26);
@@ -212,7 +243,7 @@
             // 
             // SubtotalTextBox
             // 
-            this.SubtotalTextBox.Location = new System.Drawing.Point(153, 88);
+            this.SubtotalTextBox.Location = new System.Drawing.Point(153, 117);
             this.SubtotalTextBox.Name = "SubtotalTextBox";
             this.SubtotalTextBox.ReadOnly = true;
             this.SubtotalTextBox.Size = new System.Drawing.Size(237, 26);
@@ -235,6 +266,7 @@
             this.DVDCheckBox.TabIndex = 5;
             this.DVDCheckBox.Text = "Order The DVD (Adds 10$ to total Order)";
             this.DVDCheckBox.UseVisualStyleBackColor = true;
+            this.DVDCheckBox.CheckedChanged += new System.EventHandler(this.DVDCheckBox_CheckedChanged);
             // 
             // TotalLabel
             // 
@@ -248,7 +280,7 @@
             // SalesTaxLabel
             // 
             this.SalesTaxLabel.AutoSize = true;
-            this.SalesTaxLabel.Location = new System.Drawing.Point(12, 152);
+            this.SalesTaxLabel.Location = new System.Drawing.Point(12, 168);
             this.SalesTaxLabel.Name = "SalesTaxLabel";
             this.SalesTaxLabel.Size = new System.Drawing.Size(135, 18);
             this.SalesTaxLabel.TabIndex = 3;
@@ -257,7 +289,7 @@
             // SubtotalLabel
             // 
             this.SubtotalLabel.AutoSize = true;
-            this.SubtotalLabel.Location = new System.Drawing.Point(54, 91);
+            this.SubtotalLabel.Location = new System.Drawing.Point(54, 120);
             this.SubtotalLabel.Name = "SubtotalLabel";
             this.SubtotalLabel.Size = new System.Drawing.Size(93, 18);
             this.SubtotalLabel.TabIndex = 2;
@@ -280,6 +312,7 @@
             this.BackButton.TabIndex = 9;
             this.BackButton.Text = "Back";
             this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // CancelButton
             // 
@@ -289,6 +322,7 @@
             this.CancelButton.TabIndex = 10;
             this.CancelButton.Text = "Cancel";
             this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // StreamButton
             // 
@@ -298,12 +332,14 @@
             this.StreamButton.TabIndex = 11;
             this.StreamButton.Text = "Stream";
             this.StreamButton.UseVisualStyleBackColor = true;
+            this.StreamButton.Click += new System.EventHandler(this.StreamButton_Click);
             // 
             // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(714, 569);
+            this.ControlBox = false;
             this.Controls.Add(this.StreamButton);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.BackButton);
@@ -312,7 +348,10 @@
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Perpetua Titling MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "OrderForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Order";
             this.Load += new System.EventHandler(this.OrderForm_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -355,5 +394,7 @@
         private System.Windows.Forms.Button BackButton;
         private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Button StreamButton;
+        private System.Windows.Forms.TextBox DVDTextBox;
+        private System.Windows.Forms.Label DVDLabel;
     }
 }

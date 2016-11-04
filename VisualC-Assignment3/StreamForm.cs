@@ -23,5 +23,10 @@ namespace VisualC_Assignment3
 
             TotalLabel.Text = Program.movie.FinalCost.ToString();
         }
+
+        private void OkButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

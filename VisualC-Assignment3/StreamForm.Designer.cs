@@ -45,66 +45,72 @@
             this.OkButton.TabIndex = 0;
             this.OkButton.Text = "Ok";
             this.OkButton.UseVisualStyleBackColor = true;
+            this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
             // 
             // ThankLabel
             // 
             this.ThankLabel.AutoSize = true;
-            this.ThankLabel.Location = new System.Drawing.Point(49, 9);
+            this.ThankLabel.Location = new System.Drawing.Point(48, 10);
             this.ThankLabel.Name = "ThankLabel";
             this.ThankLabel.Size = new System.Drawing.Size(413, 19);
             this.ThankLabel.TabIndex = 1;
             this.ThankLabel.Text = "Thank you for using Sharp Movie Streaming!";
+            this.ThankLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // PriceLabel
             // 
             this.PriceLabel.AutoSize = true;
-            this.PriceLabel.Location = new System.Drawing.Point(126, 61);
+            this.PriceLabel.Location = new System.Drawing.Point(125, 62);
             this.PriceLabel.Name = "PriceLabel";
             this.PriceLabel.Size = new System.Drawing.Size(258, 19);
             this.PriceLabel.TabIndex = 2;
             this.PriceLabel.Text = "Your total price comes to:";
+            this.PriceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // TotalLabel
             // 
             this.TotalLabel.AutoSize = true;
-            this.TotalLabel.Location = new System.Drawing.Point(198, 113);
+            this.TotalLabel.Location = new System.Drawing.Point(240, 118);
             this.TotalLabel.Name = "TotalLabel";
-            this.TotalLabel.Size = new System.Drawing.Size(114, 19);
+            this.TotalLabel.Size = new System.Drawing.Size(0, 19);
             this.TotalLabel.TabIndex = 3;
-            this.TotalLabel.Text = "Sample text";
+            this.TotalLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(181, 165);
+            this.label1.Location = new System.Drawing.Point(180, 166);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(148, 19);
             this.label1.TabIndex = 4;
             this.label1.Text = "Selected Movie :";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(165, 269);
+            this.label2.Location = new System.Drawing.Point(164, 270);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(180, 19);
             this.label2.TabIndex = 5;
             this.label2.Text = "Will begin shortly!";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MovieLabel
             // 
             this.MovieLabel.AutoSize = true;
-            this.MovieLabel.Location = new System.Drawing.Point(206, 217);
+            this.MovieLabel.Location = new System.Drawing.Point(240, 218);
             this.MovieLabel.Name = "MovieLabel";
-            this.MovieLabel.Size = new System.Drawing.Size(98, 19);
+            this.MovieLabel.Size = new System.Drawing.Size(0, 19);
             this.MovieLabel.TabIndex = 6;
-            this.MovieLabel.Text = "Mive name";
+            this.MovieLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // StreamForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(521, 381);
+            this.ControlBox = false;
             this.Controls.Add(this.MovieLabel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -114,6 +120,8 @@
             this.Controls.Add(this.OkButton);
             this.Font = new System.Drawing.Font("Perpetua Titling MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "StreamForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StreamForm";

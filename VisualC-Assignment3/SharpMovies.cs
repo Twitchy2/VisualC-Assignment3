@@ -12,6 +12,12 @@ using VisualC_Assignment3.Properties;
 
 namespace VisualC_Assignment3
 {
+    /// <summary>
+    /// Mdae by Logan Sikora beder
+    /// 200312188
+    /// Assignment 3 Visual C#
+    /// Nov 3rd, 2016
+    /// </summary>
     public partial class SharpMovies : Form
     {
         public SharpMovies()
@@ -69,7 +75,7 @@ namespace VisualC_Assignment3
                 Price = 2.99;
             }
 
-            CostTextBox.Text = Price.ToString("C2");
+            CostTextBox.Text = Price.ToString();
             //set button to yes
             NextButton.Enabled = true;
 
@@ -93,6 +99,12 @@ namespace VisualC_Assignment3
 
             OrderForm orderForm = new OrderForm();
             orderForm.Show();
+        }
+
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Application.Exit();
         }
     }
 }
